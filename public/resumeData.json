@@ -76,17 +76,22 @@
         "company":"Travelade",
         "title":"Software Developer",
         "years":"June 2017 - October 2019",
-        "description":"ront end developer in an young startup company in Reykjavik. Got great experience from working in agile and fast-paced startup environment. I implemented many new features on the website and had an active role in decision making process. Hands on experience with React and Redux and AWS and Git. Wrote some articles on Iceland as well."
+        "description":"Front end developer in an young startup company in Reykjavik. Got great experience from working in agile and fast-paced startup environment. I implemented many new features on the website and had an active role in decision making process. Hands on experience with React and Redux and AWS and Git. Wrote some articles about Iceland as well."
       }
     ],
-    "skills":[ "Python", "VueJs", "ReactJs", "CSS", "C#", "Spring Boot", "Java", "Angular"]
+    "skills":[ "Python", "VueJs", "ReactJs", "HTML/CSS", "C#", "Spring Boot", "Java", "Angular", "Django"]
   },
   "portfolio":{
     "projects": [
       {
         "title":"Sport Social",
         "category":"Hobby project for people that like to live an active lifestyle",
-        "url":"https://www.sportsocial.is"
+        "url":"http://sportsocial.is/"
+      },
+      {
+        "title":"Travelade",
+        "category":"Travel guids by locals in the know. Helps people find recommendations and local insights from all across the world. ",
+        "url":"http://travelade.com/"
       }
     ]
   }

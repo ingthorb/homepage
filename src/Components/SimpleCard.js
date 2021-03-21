@@ -5,6 +5,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles({
   root: {
@@ -30,19 +31,22 @@ export default function SimpleCard(props) {
   return (
     <div>
         {projects.map((project) => (
-        <Card key={project.title} className={classes.root}>
-        <CardContent>
-            <Typography className={classes.title} color="textSecondary" gutterBottom>
-            {project.title}
-            </Typography>
-            <Typography variant="h5" component="h2">
-            {project.category}
-            </Typography>
-        </CardContent>
-        <CardActions>
-            <Button href={project.url}>View website</Button>
-        </CardActions>
-        </Card>
+        <div>
+            <Card key={project.title} className={classes.root}>
+            <CardContent>
+                <Typography className={classes.title} color="textSecondary" gutterBottom>
+                {project.title}
+                </Typography>
+                <Typography variant="h5" component="h2">
+                {project.category}
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Button href={project.url}>View website</Button>
+            </CardActions>
+            </Card>
+            <Divider />
+        </div>
     ))}
     </div>
   );
