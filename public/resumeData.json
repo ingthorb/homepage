@@ -1,0 +1,93 @@
+{
+  "main": {
+    "name":"Ingþór Birkir Árnason",
+    "description":"I am a Software Developer living in Bern, Switzerland",
+    "image":"profilepic.jpg",
+    "bio":"I love exploring and experiencing something new. I like to learn new things when I can. I have also a great interest in football, outdoor activities and sports. I have great communications skills and am well organized.",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "ingthorb@gmail.com",
+    "phone": "+41 766335672",
+    "address":{
+      "street":"Weingartstrasse",
+      "state":"Bern",
+      "zip": "3014"
+    },
+    "website": "http://www.timbakerdev.com",
+    "github": "https://https://github.com/ingthorb",
+    "linkedin": "https://www.linkedin.com/in/ing%C3%BE%C3%B3r-%C3%A1rnason-83166811b/",
+    "resumedownload":"https://drive.google.com/file/d/1oOjpQx1gNWOviNwFen5Bhf-OadfDoSGr/view?usp=sharing",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"https://facebook.com/ingthorb",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"twitter",
+        "url":"http://twitter.com/ingthorb",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/ing%C3%BE%C3%B3r-%C3%A1rnason-83166811b/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"http://instagram.com/ingthorb",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"github",
+        "url":"https://https://github.com/ingthorb",
+        "className":"fa fa-github"
+      },
+      {
+        "name":"gmail",
+        "url":"ingthorb@gmail.com",
+        "className":"fa fa-envelope-o"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "education":[
+      {
+        "school":"University of Reykjavik",
+        "degree":"Bachelor in Computer Science",
+        "graduated":"June 2017",
+        "description":"Main focus on Web Development and UI design"
+      }
+    ],
+    "work":[
+      {
+        "company":"Avintis SA",
+        "title":"Software Engineer",
+        "years":"December 2019 - Present",
+        "description":"Working as external contractor for the Swiss government. Mainly working on web application as a fullstack developer. Creating Unit tests, Integration tests and Regression tests for the project. Working with Cloud Foundry, JIRA and Jenkins.  Creating Jenkinsfiles for customised projects, detailed documentation for projects. Working with Kafka events, sending and receiving messages."
+      },
+      {
+        "company":"Advania",
+        "title":"Software Engineer",
+        "years":"November 2017 - November 2019",
+        "description":"Working remotely as a technical consultant for Risk Management Solutions. Working in integration solutions and platforms mostly in the backend."
+      },
+      {
+        "company":"Travelade",
+        "title":"Software Developer",
+        "years":"June 2017 - October 2019",
+        "description":"ront end developer in an young startup company in Reykjavik. Got great experience from working in agile and fast-paced startup environment. I implemented many new features on the website and had an active role in decision making process. Hands on experience with React and Redux and AWS and Git. Wrote some articles on Iceland as well."
+      }
+    ],
+    "skills":[ "Python", "VueJs", "ReactJs", "CSS", "C#", "Spring Boot", "Java", "Angular"]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Sport Social",
+        "category":"Hobby project for people that like to live an active lifestyle",
+        "url":"https://www.sportsocial.is"
+      }
+    ]
+  }
+}
