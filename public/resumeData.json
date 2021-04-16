@@ -3,7 +3,7 @@
     "name":"Ingþór Birkir Árnason",
     "description":"I am a Software Developer living in Bern, Switzerland",
     "image":"profilepic.jpg",
-    "bio":"I love exploring and experiencing something new. I like to learn new things when I can. I have also a great interest in football, outdoor activities and sports. I have great communications skills and am well organized.",
+    "bio":"I love exploring and experiencing something new. I like to learn new things when I can. I have also a great interest in football, outdoor activities and sports. I have great communications skills and am well organized. I am open for new opportunities, just send me an email below or a message through LinkedIn.",
     "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
     "email": "ingthorb@gmail.com",
     "phone": "+41 766335672",
@@ -12,7 +12,6 @@
       "state":"Bern",
       "zip": "3014"
     },
-    "website": "http://www.timbakerdev.com",
     "github": "https://github.com/ingthorb",
     "linkedin": "https://www.linkedin.com/in/ingthorb",
     "resumedownload":"https://drive.google.com/file/d/1-ZwfQaYfPosmtr5dW_KULgNBlcFaPp1Z/view?usp=sharing",
@@ -21,11 +20,6 @@
         "name":"facebook",
         "url":"https://facebook.com/ingthorb",
         "className":"fa fa-facebook"
-      },
-      {
-        "name":"twitter",
-        "url":"http://twitter.com/ingthorb",
-        "className":"fa fa-twitter"
       },
       {
         "name":"linkedin",
@@ -70,7 +64,7 @@
         "company":"Advania",
         "title":"Software Engineer",
         "years":"November 2017 - November 2019",
-        "description":"Working remotely as a technical consultant for Risk Management Solutions. Working in integration solutions and platforms mostly in the backend."
+        "description":"Working remotely as a technical consultant for Risk Management Solutions. Working in integration solutions and platforms mostly in the backend. Reduced the time required to import data into the platform by a significant factor by creating a app through Windows Forms and C#. Implementing an integration solution for costumer to use platform through API, built using .Net, C# and Microsoft Azure and SQL databases. Set up Continuous Integration and Deployment through Microsoft Azure pipelines for delivering product with a push of a button."
       },
       {
         "company":"Travelade",
@@ -79,7 +73,7 @@
         "description":"Front end developer in an young startup company in Reykjavik. Got great experience from working in agile and fast-paced startup environment. I implemented many new features on the website and had an active role in decision making process. Hands on experience with React and Redux and AWS and Git. Wrote some articles about Iceland as well."
       }
     ],
-    "skills":[ "Python", "VueJs", "ReactJs", "HTML/CSS", "C#", "Spring Boot", "Java", "Angular", "Django"]
+    "skills":["JavaScript", "ReactJs", "Angular JS", "HTML/CSS", "C#", "Java/Spring Boot", "Python", "Django", "Scrum", "Jenkins", "Git", "CI/CD"]
   },
   "portfolio":{
     "projects": [
