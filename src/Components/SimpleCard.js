@@ -27,7 +27,6 @@ const useStyles = makeStyles({
 export default function SimpleCard(props) {
   const classes = useStyles();
   const { projects } = props;
-   console.log(projects);
   return (
     <div>
         {projects.map((project) => (
