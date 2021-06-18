@@ -1,9 +1,9 @@
 {
   "main": {
     "name":"Ingþór Birkir Árnason",
-    "description":"I am a Software Developer living in Bern, Switzerland. Looking for a new challenge",
+    "description":"I am a Software Developer living in Bern, Switzerland.",
     "image":"profilepic.jpg",
-    "bio":"I love exploring and experiencing something new. I like to learn new things when I can. I have also a great interest in football, outdoor activities and sports. I have great communications skills and am well organized. I am open for new opportunities, just send me an email below or a message through LinkedIn.",
+    "bio":"I love exploring and experiencing something new. I like to learn new things when I can. I have also a great interest in football, outdoor activities and sports. I have great communications skills and am well organized.",
     "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
     "email": "ingthorb@gmail.com",
     "phone": "+41 766335672",
@@ -44,7 +44,6 @@
     ]
   },
   "resume":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
     "education":[
       {
         "school":"University of Reykjavik",
@@ -86,6 +85,11 @@
         "title":"Travelade",
         "category":"Travel guids by locals in the know. Helps people find recommendations and local insights from all across the world. ",
         "url":"http://www.travelade.com/"
+      },
+      {
+        "title":"Getu-Cup Registration",
+        "category":"Registration website for a gymnastic tournament",
+        "url":"https://getucup.herokuapp.com/"
       }
     ]
   }

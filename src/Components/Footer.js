@@ -5,7 +5,7 @@ class Footer extends Component {
     if (!this.props.data) return null;
 
     const networks = this.props.data.social.map(function(network) {
-      if(network.name == "gmail"){
+      if(network.name === "gmail"){
         var hrefLink = "mailto:" + network.url
         return(
           <li key={network.name}>
