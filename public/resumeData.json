@@ -54,9 +54,15 @@
     ],
     "work":[
       {
+        "company":"Swisscom",
+        "title":"Data, Analytics & AI Engineer",
+        "years":"August 2021 - Present",
+        "description":""
+      },
+      {
         "company":"Avintis SA",
         "title":"Software Engineer",
-        "years":"December 2019 - Present",
+        "years":"December 2019 - July 2021",
         "description":"Working as external contractor for the Swiss government. Mainly working on web application as a fullstack developer. Creating Unit tests, Integration tests and Regression tests for the project. Working with Cloud Foundry, JIRA and Jenkins.  Creating Jenkinsfiles for customised projects, detailed documentation for projects. Working with Kafka events, sending and receiving messages."
       },
       {
