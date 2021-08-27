@@ -1,12 +1,10 @@
 {
   "main": {
     "name":"Ingþór Birkir Árnason",
-    "description":"I am a Software Developer living in Bern, Switzerland",
     "image":"profilepic.jpg",
-    "bio":"I love exploring and experiencing something new. I like to learn new things when I can. I have also a great interest in football, outdoor activities and sports. I have great communications skills and am well organized.",
-    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "bio":"I love exploring and experiencing something new. I have a great interest in football, outdoor activities and sports. I have great communications skills and am well organized. Always looking to learn something new and overcome challenges. Ps. Animation up top is connected to a Weather API in Bern that shows current weather.",
     "email": "ingthorb@gmail.com",
-    "phone": "+41 766335672",
+    "phone": "+41 797874598",
     "address":{
       "street":"Weingartstrasse",
       "state":"Bern",
@@ -49,7 +47,7 @@
         "school":"University of Reykjavik",
         "degree":"Bachelor in Computer Science",
         "graduated":"June 2017",
-        "description":"Main focus on Web Development and UI design"
+        "description":"Main focus on Web Development and UI design. Learned the important aspect to work independently."
       }
     ],
     "work":[
@@ -57,7 +55,7 @@
         "company":"Swisscom",
         "title":"Data, Analytics & AI Engineer",
         "years":"August 2021 - Present",
-        "description":""
+        "description":"Creating and maintaining web applications that are used as a Self Service Data Platform. Creating value from data and enabling all to make us of it. Working both on the front end and backend as a web developer to transform Swisscom into a data-informed company."
       },
       {
         "company":"Avintis SA",
@@ -78,23 +76,23 @@
         "description":"Front end developer in an young startup company in Reykjavik. Got great experience from working in agile and fast-paced startup environment. I implemented many new features on the website and had an active role in decision making process. Hands on experience with React and Redux and AWS and Git. Wrote some articles about Iceland as well."
       }
     ],
-    "skills":["JavaScript", "ReactJs", "Angular JS", "HTML/CSS", "C#", "Java/Spring Boot", "Python", "Django", "Scrum", "Jenkins", "Git", "CI/CD"]
+    "skills":["JavaScript", "ReactJs", "Angular JS", "HTML/CSS", "C#", "Java/Spring Boot", "Python", "Django", "VueJS", "Jenkins", "Git", "CI/CD"]
   },
   "portfolio":{
     "projects": [
       {
         "title":"Sport Social",
-        "category":"Hobby project for people that like to live an active lifestyle",
+        "category":"Hobby project for people that like to live an active lifestyle. Created with React in the frontend and Django Rest Framework in the Backend.",
         "url":"http://www.sportsocial.is/"
       },
       {
         "title":"Travelade",
-        "category":"Travel guids by locals in the know. Helps people find recommendations and local insights from all across the world. ",
-        "url":"http://www.travelade.com/"
+        "category":"Travel guids by locals in the know. Helps people find recommendations and local insights from all across the world.",
+        "url":"https://www.travelade.com/"
       },
       {
         "title":"Getu-Cup Registration",
-        "category":"Registration website for a gymnastic tournament",
+        "category":"Registration website for a gymnastic tournament here in Switzerland. Has a React frontend, Express backend and Postgres Database.",
         "url":"https://anmeldung.getucup.ch"
       }
     ]

@@ -1,4 +1,7 @@
-# My home page and experimenting with animation
+# Home Page
+Done with React.
+Created to showcase portfolio and other information about my career.
+Animation is connected to Weather API in Bern.
 
 ## Run Project
 ### 1. Clone the project
