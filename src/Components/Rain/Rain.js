@@ -81,10 +81,9 @@ var makeItRain = function () {
 export default function Rain(props) {
     const { raining } = props;
     const [rainFront, rainBack] = makeItRain();
-    console.log(rainFront[0])
     if (raining) {
         return (
-            <div>
+            <div className="rainDiv">
                 <ul>
                     {rainFront.map((rainF) => {
                         return  <div key={rainF.id}>{rainF}</div>

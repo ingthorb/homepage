@@ -7,7 +7,7 @@
   left: 0px;
 }
 
-.header-image-darker{
+.header-image-darker{ 
     filter: brightness(50%);
 }
 
@@ -17,4 +17,5 @@
 
 .descriptionHeader {
   font-weight: bold;
+  z-index: 0;
 }
