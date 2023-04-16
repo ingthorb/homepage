@@ -15,7 +15,7 @@
     "resumedownload":"https://drive.google.com/file/d/1-ZwfQaYfPosmtr5dW_KULgNBlcFaPp1Z/view?usp=sharing",
     "social":[
       {
-        "name":"facebook",
+        "name":"facebook",  
         "url":"https://facebook.com/ingthorb",
         "className":"fa fa-facebook"
       },
