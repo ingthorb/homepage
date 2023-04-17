@@ -12,7 +12,10 @@ npm i
 npm start
 ```
 
-### 3. BUild
+### 3. Build
 ```shell
 npm run build
 ```
+
+Current Build status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/915cc68a-93af-4f91-b0b0-caafb56668f7/deploy-status)](https://app.netlify.com/sites/dainty-kleicha-cba9e5/deploys)
