@@ -1,4 +1,5 @@
 import React from "react";
+import { Tooltip } from 'react-tooltip'
 import "./Rain.css";
 
 var makeItRain = function () {
@@ -83,7 +84,8 @@ export default function Rain(props) {
     const [rainFront, rainBack] = makeItRain();
     if (raining) {
         return (
-            <div className="rainDiv">
+            <div className="rainDiv" data-tooltip-id="rain-tooltip" data-tooltip-content="Now in Bern the weather is Raining. I get my information from a weather API">
+                <Tooltip id="rain-tooltip" />
                 <ul>
                     {rainFront.map((rainF) => {
                         return  <div key={rainF.id}>{rainF}</div>

@@ -1,11 +1,13 @@
 import React from "react";
+import { Tooltip } from 'react-tooltip'
 import "./Sun.css";
 
 export default function Sun(props) {
     const { sun } = props;
     if (sun) {
         return (
-            <div className="sun">
+            <div className="sun" data-tooltip-id="sun-tooltip" data-tooltip-content="Now in Bern the weather is Sunny. I get my information from a weather API">
+                <Tooltip id="sun-tooltip" />
                 <div className="ray_box">
                     <div className="ray ray1"></div>
                     <div className="ray ray2"></div>
