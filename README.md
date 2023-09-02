@@ -19,3 +19,6 @@ npm run build
 
 Current Build status
 [![Netlify Status](https://api.netlify.com/api/v1/badges/915cc68a-93af-4f91-b0b0-caafb56668f7/deploy-status)](https://app.netlify.com/sites/dainty-kleicha-cba9e5/deploys)
+
+## Analytics
+Currently I am using Google Analytics to track visits and user behaviour on my website.
