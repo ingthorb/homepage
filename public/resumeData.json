@@ -12,7 +12,7 @@
     },
     "github": "https://github.com/ingthorb",
     "linkedin": "https://www.linkedin.com/in/ingthorb",
-    "resumedownload":"https://drive.google.com/file/d/1-ZwfQaYfPosmtr5dW_KULgNBlcFaPp1Z/view?usp=sharing",
+    "resumedownload":"https://drive.google.com/file/d/1V7R53Gk_apVkAIhBVjWpI6wW6sN09yaa/view?usp=sharing",
     "social":[
       {
         "name":"facebook",  
@@ -59,8 +59,14 @@
     "work":[
       {
         "company":"Swisscom",
+        "title":"Senior Data, Analytics & AI Engineer",
+        "years":"2024 - Present",
+        "description":"Integral part of a team for internal projects in Swisscom, creating and maintaining web applications that are internal Self Service Data Platforms. Creating value from data and enabling all Swisscom Employees to take data driven decisions. Working both on the front end and backend as a web developer to transform Swisscom into a data-informed company. As well as creating and maintaining CI/CD pipelines for projects. Help introducing a new application for Data Management to help Swisscom employees see metadata of real data, the lineage and which teams are impacted by the data. With this having accurate lineage, Data Owners can see the affect of changing their data down to teams that ingest that data and all the way to Business Analysts who use this data for Business decisions. Handling the role of Security Champion for our team, actively measuring security and risk of applications. Monitoring and implementing pipelines to scan and test security of code and packages. Maintaining documentation for applications to keep up to date."
+      },
+      {
+        "company":"Swisscom",
         "title":"Data, Analytics & AI Engineer",
-        "years":"August 2021 - Present",
+        "years":"August 2021 - 2024",
         "description":"Creating and maintaining web applications that are used as a Self Service Data Platform. Creating value from data and enabling all to make us of it. Working both on the front end and backend as a web developer to transform Swisscom into a data-informed company. Took over as my teams Security Champion to ensure that we are following all security best practices. Taking integral part of our Data Management journey."
       },
       {
@@ -82,7 +88,7 @@
         "description":"Front end developer in an young startup company in Reykjavik. Got great experience from working in agile and fast-paced startup environment. I implemented many new features on the website and had an active role in decision making process. Hands on experience with React and Redux and AWS and Git. Wrote some articles about Iceland as well."
       }
     ],
-    "skills":["JavaScript", "ReactJs", "Angular JS", "HTML/CSS", "C#", "Java/Spring Boot", "Python", "Django", "VueJS", "Jenkins", "Git", "CI/CD", "AWS"]
+    "skills":["JavaScript", "ReactJs", "Angular JS", "HTML/CSS", "C#", "Java/Spring Boot", "Python", "Django", "VueJS", "Jenkins", "Git", "CI/CD", "AWS", "Kubernetes", "Docker"]
   },
   "portfolio":{
     "projects": [
