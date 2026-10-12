@@ -249,6 +249,7 @@ ul {
     align-items: center;
     padding-block: 83px 66px;
 }
+.hero-role { width: fit-content; padding: 9px 14px; border: 1px solid #d9dfcd; border-radius: 999px; background: #edf0e5; color: var(--ink); font-size: 12px; letter-spacing: .04em; text-transform: none; }
 .hero .eyebrow {
     font-size: 10px;
     display: flex;
@@ -1135,10 +1136,11 @@ footer {
         padding-block: 48px 36px;
     }
     .hero .eyebrow {
-        font-size: 9px;
-        letter-spacing: 0.1em;
+        font-size: 12px;
+        letter-spacing: 0.03em;
         margin-bottom: 22px;
     }
+    .hero-role { max-width: 100%; padding: 8px 11px; }
     .hero h1 {
         font-size: clamp(42px, 9.5vw, 64px);
     }

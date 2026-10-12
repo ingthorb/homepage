@@ -24,6 +24,8 @@ it("loads the profile and exposes all project destinations", async () => {
         await screen.findByRole("heading", { name: "NOVA Iceland" }),
     ).toBeInTheDocument();
     expect(screen.getByText("Reykjavík, Iceland")).toBeInTheDocument();
+    expect(screen.getByText("Senior Software Engineer at NOVA Iceland")).toBeInTheDocument();
+    expect(document.querySelector(".portrait-mark")).toHaveTextContent("i.");
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
     for (const project of resumeData.portfolio.projects) {
         const link = screen.getByRole("link", {
