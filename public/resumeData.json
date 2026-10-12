@@ -1,101 +1,197 @@
 {
   "main": {
-    "name":"Ingþór Birkir Árnason",
-    "image":"profilepic.jpg",
-    "bio":"I love exploring and experiencing something new. I have a great interest in football, outdoor activities and sports. I have great communications skills and am well organized. Always looking to learn something new and overcome challenges",
+    "name": "Ingþór Birkir Árnason",
+    "image": "profile_pic.JPG",
+    "bio": "I’m a Senior Software Engineer based in Reykjavík, Iceland, specializing in full-stack web development, CI/CD, and DevOps. At NOVA Iceland, I build customer-facing telecom solutions, including mobile eSIM signup and travel connectivity. Previously, I worked on self-service data platforms at Swisscom, where I also served as my team’s Security Champion. Outside work, I build products that bring people together and make learning more hands-on: DeckMate, PadelHub, and ChessAITutor. I enjoy football, outdoor activities, and taking on new challenges.",
     "email": "ingthorb@gmail.com",
-    "phone": "+41 797874598",
-    "address":{
-      "street":"Wylerfeldstrasse",
-      "state":"Bern",
-      "zip": "3014"
+    "address": {
+      "city": "Reykjavík",
+      "country": "Iceland"
     },
     "github": "https://github.com/ingthorb",
     "linkedin": "https://www.linkedin.com/in/ingthorb",
-    "resumedownload":"https://drive.google.com/file/d/1V7R53Gk_apVkAIhBVjWpI6wW6sN09yaa/view?usp=sharing",
-    "social":[
+    "social": [
       {
-        "name":"facebook",  
-        "url":"https://facebook.com/ingthorb",
-        "className":"fa fa-facebook"
+        "name": "facebook",
+        "url": "https://facebook.com/ingthorb",
+        "className": "fa fa-facebook"
       },
       {
-        "name":"linkedin",
-        "url":"https://www.linkedin.com/in/ingthorb",
-        "className":"fa fa-linkedin"
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/ingthorb",
+        "className": "fa fa-linkedin"
       },
       {
-        "name":"instagram",
-        "url":"http://instagram.com/ingthorb",
-        "className":"fa fa-instagram"
+        "name": "instagram",
+        "url": "http://instagram.com/ingthorb",
+        "className": "fa fa-instagram"
       },
       {
-        "name":"github",
-        "url":"https://github.com/ingthorb",
-        "className":"fa fa-github"
+        "name": "github",
+        "url": "https://github.com/ingthorb",
+        "className": "fa fa-github"
       },
       {
-        "name":"gmail",
-        "url":"ingthorb@gmail.com",
-        "className":"fa fa-envelope-o"
+        "name": "gmail",
+        "url": "ingthorb@gmail.com",
+        "className": "fa fa-envelope-o"
       }
-    ]
+    ],
+    "description": "Senior Software Engineer at NOVA Iceland. Building web products, telecom services, and ideas of my own."
   },
-  "resume":{
-    "education":[
+  "resume": {
+    "education": [
       {
-        "school":"University of Reykjavik",
-        "degree":"Bachelor in Computer Science",
-        "graduated":"June 2017",
-        "description":"Main focus on Web Development and UI design. Learned the important aspect to work independently."
+        "school": "Reykjavík University",
+        "degree": "Bachelor’s Degree in Computer Science",
+        "graduated": "June 2017",
+        "description": "Focused on web development and user interface design, with experience working independently and in teams."
       },
       {
         "school": "Certification",
-        "degree":"AWS Cloud Practitioner",
-        "graduated":"January 2023",
-        "description":"AWS Cloud concepts, AWS services, security, architecture and pricing."
+        "degree": "AWS Cloud Practitioner",
+        "graduated": "January 2023",
+        "description": "AWS Cloud concepts, AWS services, security, architecture and pricing."
       }
     ],
-    "work":[
+    "work": [
       {
-        "company":"Swisscom",
-        "title":"Senior Data, Analytics & AI Engineer",
-        "years":"2024 - Present",
-        "description":"Integral part of a team for internal projects in Swisscom, creating and maintaining web applications that are internal Self Service Data Platforms. Creating value from data and enabling all Swisscom Employees to take data driven decisions. Working both on the front end and backend as a web developer to transform Swisscom into a data-informed company. As well as creating and maintaining CI/CD pipelines for projects. Help introducing a new application for Data Management to help Swisscom employees see metadata of real data, the lineage and which teams are impacted by the data. With this having accurate lineage, Data Owners can see the affect of changing their data down to teams that ingest that data and all the way to Business Analysts who use this data for Business decisions. Handling the role of Security Champion for our team, actively measuring security and risk of applications. Monitoring and implementing pipelines to scan and test security of code and packages. Maintaining documentation for applications to keep up to date."
+        "company": "NOVA Iceland",
+        "title": "Senior Software Engineer",
+        "years": "October 2024 – Present",
+        "description": "Developed a mobile eSIM self-service signup flow and contributed to the Travel eSIM solution, helping customers get connected in just four clicks. Improve backend reliability and scalability across customer-facing telecom platforms."
       },
       {
-        "company":"Swisscom",
-        "title":"Data, Analytics & AI Engineer",
-        "years":"August 2021 - 2024",
-        "description":"Creating and maintaining web applications that are used as a Self Service Data Platform. Creating value from data and enabling all to make us of it. Working both on the front end and backend as a web developer to transform Swisscom into a data-informed company. Took over as my teams Security Champion to ensure that we are following all security best practices. Taking integral part of our Data Management journey."
+        "company": "Swisscom",
+        "title": "Senior Software Engineer for Data, Analytics & AI",
+        "years": "April 2024 – September 2024",
+        "description": "Continued work on internal self-service data platforms, data management, and secure software delivery, helping teams discover and use data across Swisscom."
       },
       {
-        "company":"Avintis SA",
-        "title":"Software Engineer",
-        "years":"December 2019 - July 2021",
-        "description":"Working as external contractor for the Swiss government. Mainly working on web application as a fullstack developer. Creating Unit tests, Integration tests and Regression tests for the project. Working with Cloud Foundry, JIRA and Jenkins.  Creating Jenkinsfiles for customised projects, detailed documentation for projects. Working with Kafka events, sending and receiving messages."
+        "company": "Swisscom",
+        "title": "Software Engineer for Data, Analytics & AI",
+        "years": "August 2021 – March 2024",
+        "description": "Built and maintained full-stack self-service data applications and CI/CD pipelines. Helped introduce metadata and data-lineage tooling so teams could understand downstream dependencies. As Security Champion, maintained security documentation and automated code and dependency checks. Supported the team’s AWS cloud journey."
       },
       {
-        "company":"Advania",
-        "title":"Software Engineer",
-        "years":"November 2017 - November 2019",
-        "description":"Working remotely as a technical consultant for Risk Management Solutions. Working in integration solutions and platforms mostly in the backend. Reduced the time required to import data into the platform by a significant factor by creating a app through Windows Forms and C#. Implementing an integration solution for costumer to use platform through API, built using .Net, C# and Microsoft Azure and SQL databases. Set up Continuous Integration and Deployment through Microsoft Azure pipelines for delivering product with a push of a button."
+        "company": "AVINTIS SA",
+        "title": "Software Engineer",
+        "years": "December 2019 – August 2021",
+        "description": "Worked as a consultant for the Swiss government’s Federal Office of Information Technology, Systems and Telecommunication. Built tax-authority web applications with Java, Spring Boot, Angular, and Kafka, with unit, integration, and Selenium regression tests. Maintained Jenkins pipelines and Cloud Foundry deployments."
       },
       {
-        "company":"Travelade",
-        "title":"Software Developer",
-        "years":"June 2017 - October 2019",
-        "description":"Front end developer in an young startup company in Reykjavik. Got great experience from working in agile and fast-paced startup environment. I implemented many new features on the website and had an active role in decision making process. Hands on experience with React and Redux and AWS and Git. Wrote some articles about Iceland as well."
+        "company": "Advania Ísland",
+        "title": "Software Developer / Software Engineer",
+        "years": "November 2017 – December 2019",
+        "description": "Worked with Risk Management Solutions and teams in London and New York. Built C# and .NET integrations, SQL-backed APIs, and Azure delivery pipelines. Developed Django applications and Python data pipelines using AWS Lambda, S3, and API Gateway, alongside React frontend features."
+      },
+      {
+        "company": "Travelade",
+        "title": "Software Developer",
+        "years": "June 2017 – October 2017",
+        "description": "Built frontend features with React and Redux at an early-stage travel startup. Contributed product ideas, worked with AWS and Git, and improved search-engine visibility."
+      },
+      {
+        "company": "Rauðás Hugbúnaður ehf.",
+        "title": "Web Developer · Part-time",
+        "years": "October 2016 – June 2017",
+        "description": "Worked as a full-stack developer while studying, using Java, JavaScript, and MySQL. Created website themes and games, and set up TeamCity continuous integration and deployment for the company’s Git branches."
       }
     ],
-    "skills":["JavaScript", "ReactJs", "Angular JS", "HTML/CSS", "C#", "Java/Spring Boot", "Python", "Django", "VueJS", "Jenkins", "Git", "CI/CD", "AWS", "Kubernetes", "Docker"]
+    "skills": [
+      "C# / .NET",
+      "Java / Spring Boot",
+      "JavaScript / TypeScript",
+      "React / Next.js",
+      "Angular",
+      "HTML / CSS",
+      "Python / Django",
+      "SQL / PostgreSQL",
+      "Node.js / Express",
+      "AWS",
+      "Microsoft Azure",
+      "CI/CD / DevOps",
+      "Jenkins / TeamCity",
+      "Git",
+      "Docker / Kubernetes",
+      "Kafka"
+    ]
   },
-  "portfolio":{
+  "portfolio": {
+    "intro": "From shared adventures and padel nights to learning chess: products I build around the things I enjoy.",
     "projects": [
       {
-        "title":"Travelade",
-        "category":"Travel guids by locals in the know. Helps people find recommendations and local insights from all across the world.",
-        "url":"https://www.travelade.com/"
+        "title": "DeckMate",
+        "kind": "Personal project · Web, iOS & Android",
+        "category": "Turn your trip crew into a deck of trading cards. Create invite-only trips, give friends cards with photos and playful stats, and draw a person or challenge whenever the group needs a spark. Keep the stories and photos together in private trip moments.",
+        "highlights": [
+          "Invite-only trips and shared person cards",
+          "Random draws, custom challenges, and private moments",
+          "React web client plus native mobile apps"
+        ],
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Express",
+          "Supabase",
+          "SwiftUI",
+          "Kotlin"
+        ],
+        "url": "https://www.deckmate.io/"
+      },
+      {
+        "title": "PadelHub",
+        "kind": "Personal project · Sports & community",
+        "category": "A home for padel players in Iceland to organize games, record scores, and compete with friends. Run Americano and Mexicano tournaments with automatic pairings, rounds, and standings, or create private groups for recurring sessions and season competition. Available in Icelandic and English.",
+        "highlights": [
+          "Tournament formats with automatic pairings and scoring",
+          "Private groups, invite links, and recurring sessions",
+          "Player profiles and group standings"
+        ],
+        "technologies": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Prisma",
+          "PostgreSQL",
+          "Tailwind CSS"
+        ],
+        "url": "https://padelhub.is/"
+      },
+      {
+        "title": "ChessAITutor",
+        "kind": "Personal project · Interactive learning",
+        "category": "Learn chess by playing. Challenge AI opponents at Amateur, Intermediate, and Experienced levels, then explore interactive lessons on moves, tactics, openings, and endgames. Chess puzzles and practical guidance make it easy to move from reading about a concept to trying it on the board.",
+        "highlights": [
+          "Three AI difficulty levels",
+          "Interactive lessons and tactical puzzles",
+          "Browser-based play on desktop and mobile"
+        ],
+        "technologies": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "chess.js",
+          "Tailwind CSS"
+        ],
+        "url": "https://chessaitutor.net/"
+      },
+      {
+        "title": "Gluggasalan.is",
+        "kind": "Client website · February – June 2025",
+        "category": "Created a website for a window supplier in Selfoss, Iceland. The site presents window and sliding-door ranges, installation services, and showroom contact information to help customers explore their options.",
+        "url": "https://www.gluggasalan.is/"
+      },
+      {
+        "title": "Travelade",
+        "kind": "Professional work · Travel",
+        "category": "A travel discovery platform built around local recommendations. As an early frontend developer, I contributed React and Redux features, product ideas, and SEO improvements.",
+        "technologies": [
+          "React",
+          "Redux",
+          "AWS"
+        ],
+        "url": "https://www.travelade.com/"
       }
     ]
   }

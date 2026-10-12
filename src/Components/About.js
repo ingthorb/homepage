@@ -7,19 +7,16 @@ class About extends Component {
     const name = this.props.data.name;
     const profilepic = "images/profile_pic.JPG";
     const bio = this.props.data.bio;
-    const street = this.props.data.address.street;
     const city = this.props.data.address.city;
-    const state = this.props.data.address.state;
-    const zip = this.props.data.address.zip;
-    const phone = this.props.data.phone;
+    const country = this.props.data.address.country;
     const email = this.props.data.email;
-    const resumeDownload = this.props.data.resumedownload;
+    const linkedin = this.props.data.linkedin;
 
     return (
       <section id="about">
         <div className="row">
           <div className="three columns">
-            <img className="profile-pic" src={profilepic} alt="Bern at summer" />
+            <img className="profile-pic" src={profilepic} alt={name} />
           </div>
           <div className="nine columns main-col">
             <h2>About Me</h2>
@@ -32,20 +29,16 @@ class About extends Component {
                   <span>{name}</span>
                   <br />
                   <span>
-                    {street}
-                    <br />
-                    {city} {state}, {zip}
+                    {city}, {country}
                   </span>
                   <br />
-                  <span>{phone}</span>
-                  <br />
-                  <span>{email}</span>
+                  <a href={`mailto:${email}`}>{email}</a>
                 </p>
               </div>
               <div className="columns download">
                 <p>
-                  <a href={resumeDownload} className="button">
-                    <i className="fa fa-download"></i>Download Resume
+                  <a href={linkedin} className="button">
+                    <i className="fa fa-linkedin" aria-hidden="true"></i>View LinkedIn Profile
                   </a>
                 </p>
               </div>

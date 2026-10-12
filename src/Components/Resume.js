@@ -14,7 +14,6 @@ class Resume extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const skillmessage = this.props.data.skillmessage;
     const education = this.props.data.education.map(function(education) {
       return (
         <div key={education.school}>
@@ -30,7 +29,7 @@ class Resume extends Component {
 
     const work = this.props.data.work.map(function(work) {
       return (
-        <div key={work.company}>
+        <div key={`${work.company}-${work.title}`}>
           <h3>{work.company}</h3>
           <p className="info">
             {work.title}

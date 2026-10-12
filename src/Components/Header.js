@@ -17,6 +17,7 @@ export default class Header extends Component {
     }
 
     componentDidMount() {
+        if (!process.env.REACT_APP_API) return;
         axiosConfig
             .get()
             .then((res) => {
@@ -107,7 +108,7 @@ export default class Header extends Component {
 
                         <li>
                             <a className="smoothscroll" href="#portfolio">
-                                Works
+                                Projects
                             </a>
                         </li>
                     </ul>

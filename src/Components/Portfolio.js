@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import Zmage from "react-zmage";
 import SimpleCard from "./SimpleCard";
 
-let id = 0;
 class Portfolio extends Component {
   render() {
     if (!this.props.data) return null;
@@ -13,8 +11,9 @@ class Portfolio extends Component {
       <section id="portfolio">
         <div className="row">
           <div className="twelve columns collapsed">
-            <h1>Here are some projects I have worked on</h1>
-            <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+            <h1>Projects & products</h1>
+            <p className="portfolio-intro">{this.props.data.intro}</p>
+            <div id="portfolio-wrapper">
               <SimpleCard projects={projects}></SimpleCard>
             </div>
           </div>

@@ -15,17 +15,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ListItemLink(props) {
-  return <ListItem button component="a" {...props} />;
-}
-
 export default function SimpleList(props) {
   const classes = useStyles();
   const { codes } = props;
 
   return (
     <div className={classes.root}>
-      <List component="nav" aria-label="Users">
+      <List aria-label="Technical skills">
       {codes.map((code) => (
           <ListItem key={code}>
           <ListItemIcon>

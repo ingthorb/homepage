@@ -1,0 +1,13 @@
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; text-align: left; }
+.project-card { display: flex; flex-direction: column; padding: 32px; background: #fff; border: 1px solid #dce3e5; border-radius: 12px; border-top: 4px solid #087f8c; }
+#portfolio .project-card h2 { margin: 0 0 16px; font-size: 28px; color: #18343c; }
+#portfolio .project-kind { color: #49616a; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+#portfolio .project-description { color: #45555c; line-height: 1.8; margin-bottom: 16px; }
+.project-highlights { list-style: disc; margin: 0 0 24px 18px; color: #45555c; }
+.project-technologies { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: auto 0 24px; padding-top: 8px; }
+.project-technologies li { padding: 4px 10px; border-radius: 5px; background: #edf5f5; color: #28545a; font-size: 12px; line-height: 1.6; }
+.project-link { align-self: flex-start; font-weight: bold; color: #066b76; padding: 10px 0; }
+.project-link:hover { color: #142f36; text-decoration: underline; }
+.project-link:focus-visible { outline: 3px solid #087f8c; outline-offset: 5px; }
+#portfolio .portfolio-intro { max-width: 650px; margin: 0 auto 36px; text-align: center; color: #45555c; }
+@media (max-width: 767px) { .project-grid { grid-template-columns: 1fr; } .project-card { padding: 24px; } }
