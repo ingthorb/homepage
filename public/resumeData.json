@@ -137,7 +137,9 @@
           "SwiftUI",
           "Kotlin"
         ],
-        "url": "https://www.deckmate.io/"
+        "url": "https://www.deckmate.io/",
+        "art": "deckmate",
+        "group": "Personal products"
       },
       {
         "title": "PadelHub",
@@ -156,7 +158,9 @@
           "PostgreSQL",
           "Tailwind CSS"
         ],
-        "url": "https://padelhub.is/"
+        "url": "https://padelhub.is/",
+        "art": "padel",
+        "group": "Personal products"
       },
       {
         "title": "ChessAITutor",
@@ -174,7 +178,9 @@
           "chess.js",
           "Tailwind CSS"
         ],
-        "url": "https://chessaitutor.net/"
+        "url": "https://chessaitutor.net/",
+        "art": "chess",
+        "group": "Personal products"
       },
       {
         "title": "Bilabud.is",
@@ -185,13 +191,23 @@
           "Prices, special offers, and stock availability",
           "Shopping basket and individual product pages"
         ],
-        "url": "https://bilabud.is/"
+        "url": "https://bilabud.is/",
+        "art": "bilabud",
+        "group": "Websites",
+        "technologies": [
+          "Framer"
+        ]
       },
       {
         "title": "Gluggasalan.is",
         "kind": "Client website · February – June 2025",
         "category": "Created a website for a window supplier in Selfoss, Iceland. The site presents window and sliding-door ranges, installation services, and showroom contact information to help customers explore their options.",
-        "url": "https://www.gluggasalan.is/"
+        "url": "https://www.gluggasalan.is/",
+        "art": "gluggasalan",
+        "group": "Websites",
+        "technologies": [
+          "Framer"
+        ]
       },
       {
         "title": "Travelade",
@@ -202,7 +218,9 @@
           "Redux",
           "AWS"
         ],
-        "url": "https://www.travelade.com/"
+        "url": "https://www.travelade.com/",
+        "art": "travelade",
+        "group": "Professional work"
       }
     ]
   }

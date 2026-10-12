@@ -35,14 +35,14 @@ Project descriptions were checked against the live sites and local project docum
 - [DeckMate](https://www.deckmate.io/): invite-only trips, person cards, random draws, challenges, and private moments; React/TypeScript web, Express/Supabase backend, and native iOS/Android clients. Native clients are described as project work, without claiming App Store availability.
 - [PadelHub](https://padelhub.is/): tournament pairing and scoring, private groups, sessions, and standings; Next.js, Prisma, and PostgreSQL.
 - [ChessAITutor](https://chessaitutor.net/): AI opponents at three levels, interactive lessons, and chess puzzles; Next.js, React, and chess.js.
-- [Bilabud.is](https://bilabud.is/): Icelandic RC vehicle store with product categories, search, special offers, stock information, and a shopping basket; description checked against the live site.
-- [Gluggasalan.is](https://www.gluggasalan.is/): client website for a window supplier in Selfoss, listed on LinkedIn for February–June 2025.
+- [Bilabud.is](https://bilabud.is/): Framer website for an Icelandic RC vehicle store with product categories, search, special offers, stock information, and a shopping basket; description checked against the live site.
+- [Gluggasalan.is](https://www.gluggasalan.is/): Framer client website for a window supplier in Selfoss, listed on LinkedIn for February–June 2025.
 - Travelade remains listed as earlier professional work.
 
-## Weather and analytics
+## Design and analytics
 
-The header keeps the original photograph taken in Bern. Optional weather animation now follows Reykjavík. Set `REACT_APP_API` to your WeatherAPI key in a local environment file to enable it; without a key, weather requests are skipped. Client-side environment variables are public in the compiled app.
+The homepage uses a warm ivory, forest green, and lime design with locally hosted fonts, responsive project filters, expandable career entries, and keyboard-accessible navigation. See [the design system](design-system/README.md) for the UI UX Pro Max source, decisions, and maintenance notes.
 
-The existing Google Analytics integration is retained.
+The existing GA4 integration is retained. The old weather animation, jQuery page scripts, and duplicate Universal Analytics initialization are no longer loaded.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/915cc68a-93af-4f91-b0b0-caafb56668f7/deploy-status)](https://app.netlify.com/sites/dainty-kleicha-cba9e5/deploys)

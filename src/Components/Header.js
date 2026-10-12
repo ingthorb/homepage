@@ -1,145 +1,129 @@
-import React, { Component } from "react";
-import "./Header.css";
-import Rain from "./Rain/Rain";
-import Snow from "./Snow/Snow";
-import Sun from "./Sun/Sun";
-import axiosConfig from "../utils/Axios/axiosConfig";
-import moment from "moment";
+import React, { useRef, useState } from "react";
+import Icon from "./Icon";
 
-export default class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isRaining: false,
-            isSunny: false,
-            isSnowing: false,
-        };
-    }
-
-    componentDidMount() {
-        if (!process.env.REACT_APP_API) return;
-        axiosConfig
-            .get()
-            .then((res) => {
-                let weatherCode = res.data.current.condition.code;
-                if (weatherCode === 1000 || weatherCode === 1003) {
-                    this.setState({ isSunny: true });
-                } else if (
-                    weatherCode === 1150 ||
-                    weatherCode === 1153 ||
-                    weatherCode === 1183 ||
-                    weatherCode === 1186 ||
-                    weatherCode === 1189 ||
-                    weatherCode === 1195 ||
-                    weatherCode === 1243 ||
-                    weatherCode === 1246
-                ) {
-                    this.setState({ isRaining: true });
-                } else if (
-                    weatherCode === 1213 ||
-                    weatherCode === 1216 ||
-                    weatherCode === 1225 ||
-                    weatherCode === 1237 ||
-                    weatherCode === 1258 ||
-                    moment(new Date().getMonth).isSameOrAfter('December')
-                ) {
-                    this.setState({ isSnowing: true });
-                }
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            });
-    }
-
-    render() {
-        if (!this.props.data) return null;
-
-        const linkedin = this.props.data.linkedin;
-        const github = this.props.data.github;
-        const name = this.props.data.name;
-        const description = this.props.data.description;
-
-        return (
-            <header id="home">
-                <img
-                    alt="Bern in July, taken by me"
-                    className={`header-image ${
-                        this.state.isRaining ? "header-image-darker" : ""
-                    }  ${this.state.isSnowing ? "header-image-darker" : ""} ${
-                        this.state.isSunny ? "header-image-brighter" : ""
-                    }`}
-                    src="images/header_pic.jpg"
-                />
-                <Sun sun={this.state.isSunny} />
-                <nav id="nav-wrap">
+export default function Header({ data }) {
+    const [open, setOpen] = useState(false);
+    const toggle = useRef(null);
+    const close = () => setOpen(false);
+    return (
+        <header id="home">
+            <div
+                className="nav-shell"
+                onKeyDown={(event) => {
+                    if (event.key === "Escape" && open) {
+                        close();
+                        toggle.current?.focus();
+                    }
+                }}
+            >
+                <div className="container nav-inner">
                     <a
-                        className="mobile-btn"
-                        href="#nav-wrap"
-                        title="Show navigation"
-                    >
-                        Show navigation
-                    </a>
-                    <a
-                        className="mobile-btn"
+                        className="wordmark"
                         href="#home"
-                        title="Hide navigation"
+                        aria-label="Ingþór — home"
+                        onClick={close}
                     >
-                        Hide navigation
+                        ingþór<span>.</span>
                     </a>
-                    <ul id="nav" className="nav">
-                        <li className="current">
-                            <a className="smoothscroll" href="#home">
-                                Home
-                            </a>
-                        </li>
-
-                        <li>
-                            <a className="smoothscroll" href="#about">
-                                About
-                            </a>
-                        </li>
-
-                        <li>
-                            <a className="smoothscroll" href="#resume">
-                                Resume
-                            </a>
-                        </li>
-
-                        <li>
-                            <a className="smoothscroll" href="#portfolio">
-                                Projects
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div className="row banner">
-                    <div className="banner-text">
-                        <h1 className="responsive-headline">{name}</h1>
-                        <h3 className="descriptionHeader">{description}</h3>
-                        <hr />
-                        <ul className="social">
-                            <a
-                                href={linkedin}
-                                className="button btn linkedin-btn"
-                            >
-                                <i className="fa fa-linkedin"></i>Linkedin
-                            </a>
-                            <a href={github} className="button btn github-btn">
-                                <i className="fa fa-github"></i>Github
-                            </a>
-                        </ul>
+                    <button
+                        className="menu-toggle"
+                        ref={toggle}
+                        aria-expanded={open}
+                        aria-controls="main-navigation"
+                        aria-label={
+                            open ? "Close navigation" : "Open navigation"
+                        }
+                        onClick={() => setOpen(!open)}
+                    >
+                        <Icon name={open ? "close" : "menu"} />
+                    </button>
+                    <nav
+                        id="main-navigation"
+                        className={open ? "navigation is-open" : "navigation"}
+                        aria-label="Main navigation"
+                    >
+                        <a href="#portfolio" onClick={close}>
+                            Projects
+                        </a>
+                        <a href="#about" onClick={close}>
+                            About
+                        </a>
+                        <a href="#resume" onClick={close}>
+                            Experience
+                        </a>
+                        <a
+                            className="nav-contact"
+                            href="#contact"
+                            onClick={close}
+                        >
+                            Let’s talk <Icon name="external" />
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <div className="container hero">
+                <div className="hero-copy">
+                    <p className="eyebrow">
+                        <span className="status-dot" /> SENIOR SOFTWARE ENGINEER
+                        · ICELAND
+                    </p>
+                    <h1>
+                        Thoughtful code.
+                        <br />
+                        <span className="serif">Useful things.</span>
+                    </h1>
+                    <p className="hero-intro">
+                        I’m Ingþór Birkir Árnason. I build software that
+                        connects people, solves everyday problems, and turns a
+                        good idea into something real.
+                    </p>
+                    <div className="hero-actions">
+                        <a className="button button-primary" href="#portfolio">
+                            Explore my projects <Icon name="down" />
+                        </a>
+                        <a
+                            className="text-link"
+                            href={data.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub <Icon name="external" />
+                        </a>
+                    </div>
+                    <div className="hero-current">
+                        <span className="mini-label">CURRENTLY</span>
+                        <span>
+                            Senior Software Engineer at{" "}
+                            <strong>NOVA Iceland</strong>
+                        </span>
                     </div>
                 </div>
-                <Snow snowing={this.state.isSnowing} />
-                <Rain raining={this.state.isRaining} />
-
-                <p className="scrolldown">
-                    <a className="smoothscroll" href="#about">
-                        <i className="icon-down-circle"></i>
-                    </a>
-                </p>
-            </header>
-        );
-    }
+                <figure className="hero-portrait">
+                    <div className="portrait-frame">
+                        <img
+                            src={`images/${data.image}`}
+                            alt={data.name}
+                            width="1000"
+                            height="1000"
+                        />
+                        <span className="portrait-mark" aria-hidden="true">
+                            í.
+                        </span>
+                    </div>
+                    <figcaption>
+                        <span>
+                            <Icon name="pin" /> Reykjavík, Iceland
+                        </span>
+                        <span>Always curious.</span>
+                    </figcaption>
+                </figure>
+            </div>
+            <div className="container hero-bottom">
+                <p>From telecom platforms to weekend ideas.</p>
+                <a href="#portfolio">
+                    A few things I’ve built <Icon name="down" />
+                </a>
+            </div>
+        </header>
+    );
 }

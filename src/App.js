@@ -1,55 +1,79 @@
-import React, { Component } from "react";
-import ReactGA from "react-ga";
-import $ from "jquery";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Resume from "./Components/Resume";
 import Portfolio from "./Components/Portfolio";
+import Footer from "./Components/Footer";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      foo: "bar",
-      resumeData: {}
-    };
+export default function App() {
+    const [data, setData] = useState(null);
+    const [error, setError] = useState(false);
+    const [attempt, setAttempt] = useState(0);
 
-    ReactGA.initialize("UA-110570651-1");
-    ReactGA.pageview(window.location.pathname);
-  }
+    useEffect(() => {
+        const controller = new AbortController();
+        setError(false);
+        fetch(`${process.env.PUBLIC_URL || "."}/resumeData.json`, {
+            signal: controller.signal,
+        })
+            .then((response) => {
+                if (!response.ok) throw new Error("Unable to load portfolio");
+                return response.json();
+            })
+            .then((result) => {
+                if (
+                    !result.main ||
+                    !result.resume ||
+                    !Array.isArray(result.portfolio?.projects)
+                )
+                    throw new Error("Invalid portfolio");
+                setData(result);
+            })
+            .catch((err) => {
+                if (err.name !== "AbortError") setError(true);
+            });
+        return () => controller.abort();
+    }, [attempt]);
 
-  getResumeData() {
-    $.ajax({
-      url: "./resumeData.json",
-      dataType: "json",
-      cache: false,
-      success: function(data) {
-        this.setState({ resumeData: data });
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.log(err);
-        alert(err);
-      }
-    });
-  }
+    if (!data)
+        return (
+            <main className="loading-page">
+                <a className="wordmark" href="#home">
+                    ingþór<span>.</span>
+                </a>
+                {error ? (
+                    <div role="alert">
+                        <h1>Let’s try that again.</h1>
+                        <p>
+                            The portfolio couldn’t load. Please check your
+                            connection.
+                        </p>
+                        <button
+                            className="button button-primary"
+                            onClick={() => setAttempt((value) => value + 1)}
+                        >
+                            Retry
+                        </button>
+                    </div>
+                ) : (
+                    <p role="status">Loading the portfolio…</p>
+                )}
+            </main>
+        );
 
-  componentDidMount() {
-    this.getResumeData();
-  }
-
-  render() {
     return (
-      <div className="App">
-        <Header data={this.state.resumeData.main} />
-        <About data={this.state.resumeData.main} />
-        <Resume data={this.state.resumeData.resume} />
-        <Portfolio data={this.state.resumeData.portfolio} />
-        <Footer data={this.state.resumeData.main} />
-      </div>
+        <>
+            <a className="skip-link" href="#main">
+                Skip to content
+            </a>
+            <Header data={data.main} />
+            <main id="main" tabIndex="-1">
+                <Portfolio data={data.portfolio} />
+                <About data={data.main} />
+                <Resume data={data.resume} />
+            </main>
+            <Footer data={data.main} />
+        </>
     );
-  }
 }
-
-export default App;
