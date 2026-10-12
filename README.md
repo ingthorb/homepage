@@ -35,6 +35,7 @@ Project descriptions were checked against the live sites and local project docum
 - [DeckMate](https://www.deckmate.io/): invite-only trips, person cards, random draws, challenges, and private moments; React/TypeScript web, Express/Supabase backend, and native iOS/Android clients. Native clients are described as project work, without claiming App Store availability.
 - [PadelHub](https://padelhub.is/): tournament pairing and scoring, private groups, sessions, and standings; Next.js, Prisma, and PostgreSQL.
 - [ChessAITutor](https://chessaitutor.net/): AI opponents at three levels, interactive lessons, and chess puzzles; Next.js, React, and chess.js.
+- [Bilabud.is](https://bilabud.is/): Icelandic RC vehicle store with product categories, search, special offers, stock information, and a shopping basket; description checked against the live site.
 - [Gluggasalan.is](https://www.gluggasalan.is/): client website for a window supplier in Selfoss, listed on LinkedIn for February–June 2025.
 - Travelade remains listed as earlier professional work.
 
