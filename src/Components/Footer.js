@@ -1,44 +1,62 @@
-import React, { Component } from "react";
+import React from "react";
+import Icon from "./Icon";
 
-class Footer extends Component {
-  render() {
-    if (!this.props.data) return null;
-
-    const networks = this.props.data.social.map(function(network) {
-      if(network.name === "gmail"){
-        var hrefLink = "mailto:" + network.url
-        return(
-          <li key={network.name}>
-            <a href={hrefLink}>
-              <i className={network.className}></i>
-            </a>
-          </li>
-        )
-      }
-      return (
-        <li key={network.name}>
-          <a href={network.url}>
-            <i className={network.className}></i>
-          </a>
-        </li>
-      );
-    });
-
+export default function Footer({ data }) {
     return (
-      <footer>
-        <div className="row">
-          <div className="twelve columns">
-            <ul className="social-links">{networks}</ul>
-          </div>
-          <div id="go-top">
-            <a className="smoothscroll" title="Back to Top" href="#home">
-              <i className="icon-up-open"></i>
-            </a>
-          </div>
-        </div>
-      </footer>
+        <footer id="contact">
+            <div className="container">
+                <div className="contact-main">
+                    <div>
+                        <p className="eyebrow">04 / SAY HELLO</p>
+                        <h2>
+                            Have something
+                            <br />
+                            <span className="serif">in mind?</span>
+                        </h2>
+                        <p>
+                            A project, a question, or just a good conversation.
+                            <br />
+                            I’d love to hear from you.
+                        </p>
+                    </div>
+                    <a className="contact-email" href={`mailto:${data.email}`}>
+                        <span>LET’S START A CONVERSATION</span>
+                        {data.email}
+                        <Icon name="external" />
+                    </a>
+                </div>
+                <div className="footer-bottom">
+                    <a
+                        className="wordmark"
+                        href="#home"
+                        aria-label="Ingþór — back to top"
+                    >
+                        ingþór<span>.</span>
+                    </a>
+                    <p>
+                        © {new Date().getFullYear()} {data.name}
+                    </p>
+                    <div>
+                        <a
+                            href={data.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub <Icon name="external" />
+                        </a>
+                        <a
+                            href={data.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn <Icon name="external" />
+                        </a>
+                        <a href="#home">
+                            Back to top <span aria-hidden="true">↑</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     );
-  }
 }
-
-export default Footer;

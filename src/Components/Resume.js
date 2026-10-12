@@ -1,89 +1,86 @@
-import React, { Component } from "react";
-import SimpleList from "./SimpleList";
+import React from "react";
+import Icon from "./Icon";
 
-class Resume extends Component {
-  getRandomColor() {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
-
-  render() {
-    if (!this.props.data) return null;
-
-    const education = this.props.data.education.map(function(education) {
-      return (
-        <div key={education.school}>
-          <h3>{education.school}</h3>
-          <p className="info">
-            {education.degree} <span>&bull;</span>
-            <em className="date">{education.graduated}</em>
-          </p>
-          <p>{education.description}</p>
-        </div>
-      );
-    });
-
-    const work = this.props.data.work.map(function(work) {
-      return (
-        <div key={`${work.company}-${work.title}`}>
-          <h3>{work.company}</h3>
-          <p className="info">
-            {work.title}
-            <span>&bull;</span> <em className="date">{work.years}</em>
-          </p>
-          <p>{work.description}</p>
-        </div>
-      );
-    });
-
-    const skills = this.props.data.skills;
-
+export default function Resume({ data }) {
     return (
-      <section id="resume">
-        <div className="row education">
-          <div className="three columns header-col">
-            <h1>
-              <span>Education</span>
-            </h1>
-          </div>
-
-          <div className="nine columns main-col">
-            <div className="row item">
-              <div className="twelve columns">{education}</div>
+        <section
+            className="section experience-section"
+            id="resume"
+            aria-labelledby="experience-heading"
+        >
+            <div className="container">
+                <div className="section-heading">
+                    <div>
+                        <p className="eyebrow">03 / THE JOURNEY SO FAR</p>
+                        <h2 id="experience-heading">
+                            Built on <span className="serif">experience.</span>
+                        </h2>
+                    </div>
+                    <p>
+                        Teams in Iceland and Switzerland.
+                        <br />
+                        Products used by real people.
+                        <br />
+                        Something learned at every step.
+                    </p>
+                </div>
+                <div className="experience-grid">
+                    <div className="experience-list">
+                        {data.work.map((work, index) => (
+                            <details
+                                className="experience-item"
+                                key={`${work.company}-${work.title}`}
+                                open={index === 0 ? true : undefined}
+                            >
+                                <summary>
+                                    <span className="work-number">
+                                        {String(index + 1).padStart(2, "0")}
+                                    </span>
+                                    <span className="work-title">
+                                        <h3>{work.company}</h3>
+                                        <span>{work.title}</span>
+                                        <span className="work-date">
+                                            {work.years}
+                                        </span>
+                                    </span>
+                                    <Icon name="plus" />
+                                </summary>
+                                <p>{work.description}</p>
+                            </details>
+                        ))}
+                    </div>
+                    <aside className="education">
+                        <span className="mini-label">FOUNDATIONS</span>
+                        {data.education.map((item) => (
+                            <div className="education-item" key={item.school}>
+                                <h3>{item.degree}</h3>
+                                <p>{item.school}</p>
+                                <span>{item.graduated}</span>
+                            </div>
+                        ))}
+                        <a
+                            className="text-link"
+                            href="https://www.linkedin.com/in/ingthorb/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Full career profile <Icon name="external" />
+                        </a>
+                    </aside>
+                </div>
+                <div className="skills">
+                    <div>
+                        <Icon name="code" />
+                        <h3>My toolkit</h3>
+                        <p>The right tools for the problem.</p>
+                    </div>
+                    <ul aria-label="Technical skills">
+                        {data.skills.map((skill) => (
+                            <li key={skill}>{skill}</li>
+                        ))}
+                    </ul>
+                </div>
             </div>
-          </div>
-        </div>
-
-        <div className="row work">
-          <div className="three columns header-col">
-            <h1>
-              <span>Work</span>
-            </h1>
-          </div>
-
-          <div className="nine columns main-col">{work}</div>
-        </div>
-
-        <div className="row skill">
-          <div className="three columns header-col">
-            <h1>
-              <span>Skills</span>
-            </h1>
-          </div>
-
-          <div className="nine columns main-col">
-            <div className="">
-              <SimpleList codes={skills}></SimpleList>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
     );
-  }
 }
-
-export default Resume;

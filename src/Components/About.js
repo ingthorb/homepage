@@ -1,53 +1,57 @@
-import React, { Component } from "react";
+import React from "react";
+import Icon from "./Icon";
 
-class About extends Component {
-  render() {
-    if (!this.props.data) return null;
-
-    const name = this.props.data.name;
-    const profilepic = "images/profile_pic.JPG";
-    const bio = this.props.data.bio;
-    const city = this.props.data.address.city;
-    const country = this.props.data.address.country;
-    const email = this.props.data.email;
-    const linkedin = this.props.data.linkedin;
-
+export default function About({ data }) {
     return (
-      <section id="about">
-        <div className="row">
-          <div className="three columns">
-            <img className="profile-pic" src={profilepic} alt={name} />
-          </div>
-          <div className="nine columns main-col">
-            <h2>About Me</h2>
-
-            <p>{bio}</p>
-            <div className="row">
-              <div className="columns contact-details">
-                <h2>Contact Details</h2>
-                <p className="address">
-                  <span>{name}</span>
-                  <br />
-                  <span>
-                    {city}, {country}
-                  </span>
-                  <br />
-                  <a href={`mailto:${email}`}>{email}</a>
-                </p>
-              </div>
-              <div className="columns download">
-                <p>
-                  <a href={linkedin} className="button">
-                    <i className="fa fa-linkedin" aria-hidden="true"></i>View LinkedIn Profile
-                  </a>
-                </p>
-              </div>
+        <section
+            className="section about-section"
+            id="about"
+            aria-labelledby="about-heading"
+        >
+            <div className="container about-grid">
+                <div>
+                    <p className="eyebrow">02 / A LITTLE ABOUT ME</p>
+                    <h2 id="about-heading">
+                        An engineer.
+                        <br />A builder.
+                        <br />
+                        <span className="serif">A curious person.</span>
+                    </h2>
+                    <a
+                        className="text-link"
+                        href={data.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        More on LinkedIn <Icon name="external" />
+                    </a>
+                </div>
+                <div className="about-copy">
+                    <p className="lead">
+                        Good software starts with understanding the people who
+                        use it.
+                    </p>
+                    <p>{data.bio}</p>
+                    <div className="about-notes">
+                        <div>
+                            <span className="mini-label">HOW I WORK</span>
+                            <p>
+                                From frontend details to backend reliability and
+                                the pipelines in between.
+                            </p>
+                        </div>
+                        <div>
+                            <span className="mini-label">
+                                AWAY FROM THE SCREEN
+                            </span>
+                            <p>
+                                Football, outdoor adventures, and finding the
+                                next thing to learn.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
     );
-  }
 }
-
-export default About;
