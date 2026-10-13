@@ -106,9 +106,6 @@ export default function Header({ data }) {
                             width="1000"
                             height="1000"
                         />
-                        <span className="portrait-mark" aria-hidden="true">
-                            i.
-                        </span>
                     </div>
                     <figcaption>
                         <span>
