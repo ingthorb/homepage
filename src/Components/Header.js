@@ -63,9 +63,9 @@ export default function Header({ data }) {
             </div>
             <div className="container hero">
                 <div className="hero-copy">
-                    <p className="eyebrow">
-                        <span className="status-dot" /> SENIOR SOFTWARE ENGINEER
-                        · ICELAND
+                    <p className="eyebrow hero-role">
+                        <span className="status-dot" aria-hidden="true" />
+                        Senior Software Engineer at NOVA Iceland
                     </p>
                     <h1>
                         Thoughtful code.
@@ -106,9 +106,6 @@ export default function Header({ data }) {
                             width="1000"
                             height="1000"
                         />
-                        <span className="portrait-mark" aria-hidden="true">
-                            í.
-                        </span>
                     </div>
                     <figcaption>
                         <span>

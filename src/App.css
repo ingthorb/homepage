@@ -249,6 +249,7 @@ ul {
     align-items: center;
     padding-block: 83px 66px;
 }
+.hero .eyebrow.hero-role { width: fit-content; padding: 9px 14px; border: 1px solid #d9dfcd; border-radius: 999px; background: #edf0e5; color: var(--ink); font-size: 13px; font-weight: 600; letter-spacing: .01em; text-transform: none; }
 .hero .eyebrow {
     font-size: 10px;
     display: flex;
@@ -320,22 +321,6 @@ ul {
     object-position: 50% 48%;
     border-radius: 140px 140px 5px 5px;
     filter: saturate(0.75);
-}
-.portrait-mark {
-    position: absolute;
-    bottom: 32px;
-    left: -24px;
-    background: var(--lime);
-    border-radius: 50%;
-    width: 86px;
-    height: 86px;
-    display: grid;
-    place-items: center;
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 48px;
-    transform: rotate(-12deg);
-    border: 6px solid var(--paper);
 }
 .hero-portrait figcaption {
     display: flex;
@@ -1135,10 +1120,11 @@ footer {
         padding-block: 48px 36px;
     }
     .hero .eyebrow {
-        font-size: 9px;
-        letter-spacing: 0.1em;
+        font-size: 12px;
+        letter-spacing: 0.03em;
         margin-bottom: 22px;
     }
+    .hero-role { max-width: 100%; padding: 8px 11px; }
     .hero h1 {
         font-size: clamp(42px, 9.5vw, 64px);
     }
@@ -1171,12 +1157,6 @@ footer {
     }
     .hero-portrait figcaption {
         font-size: 10px;
-    }
-    .portrait-mark {
-        width: 74px;
-        height: 74px;
-        font-size: 40px;
-        left: -22px;
     }
     .hero-bottom {
         font-size: 10px;
