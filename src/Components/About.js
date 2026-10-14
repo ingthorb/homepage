@@ -12,10 +12,11 @@ export default function About({ data }) {
                 <div>
                     <p className="eyebrow">02 / A LITTLE ABOUT ME</p>
                     <h2 id="about-heading">
-                        An engineer.
-                        <br />A builder.
+                        Reykjavík,
                         <br />
-                        <span className="serif">A curious person.</span>
+                        then Switzerland,
+                        <br />
+                        <span className="serif">then home.</span>
                     </h2>
                     <a
                         className="text-link"
@@ -28,26 +29,24 @@ export default function About({ data }) {
                 </div>
                 <div className="about-copy">
                     <p className="lead">
-                        Good software starts with understanding the people who
-                        use it.
+                        I’m a software engineer in Reykjavík. I got into this
+                        because I like making things, and I still do that when
+                        I’m not at work.
                     </p>
                     <p>{data.bio}</p>
                     <div className="about-notes">
                         <div>
                             <span className="mini-label">HOW I WORK</span>
                             <p>
-                                From frontend details to backend reliability and
-                                the pipelines in between.
+                                I stay with a feature from the UI to the backend
+                                and the deploy pipeline.
                             </p>
                         </div>
                         <div>
                             <span className="mini-label">
                                 AWAY FROM THE SCREEN
                             </span>
-                            <p>
-                                Football, outdoor adventures, and finding the
-                                next thing to learn.
-                            </p>
+                            <p>Football, time outside, and padel.</p>
                         </div>
                     </div>
                 </div>

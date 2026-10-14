@@ -44,7 +44,7 @@ export default function App() {
                 </a>
                 {error ? (
                     <div role="alert">
-                        <h1>Let’s try that again.</h1>
+                        <h1>The page didn’t load.</h1>
                         <p>
                             The portfolio couldn’t load. Please check your
                             connection.

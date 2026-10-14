@@ -23,16 +23,14 @@ export default function Portfolio({ data }) {
                     <div>
                         <p className="eyebrow">01 / SELECTED WORK</p>
                         <h2 id="projects-heading">
-                            Ideas,{" "}
-                            <span className="serif">out in the world.</span>
+                            What I’ve{" "}
+                            <span className="serif">shipped.</span>
                         </h2>
                     </div>
                     <p>
-                        Some solve a problem.
+                        Client websites, apps I wanted myself,
                         <br />
-                        Some start with “what if?”
-                        <br />
-                        All of them are built with care.
+                        and some earlier work.
                     </p>
                 </div>
                 <div className="project-toolbar">

@@ -2,7 +2,7 @@
   "main": {
     "name": "Ingþór Birkir Árnason",
     "image": "ingthor-profile.png",
-    "bio": "I’m a Senior Software Engineer based in Reykjavík, Iceland, specializing in full-stack web development, CI/CD, and DevOps. At NOVA Iceland, I build customer-facing telecom solutions, including mobile eSIM signup and travel connectivity. Previously, I worked on self-service data platforms at Swisscom, where I also served as my team’s Security Champion. Outside work, I build products that bring people together and make learning more hands-on: DeckMate, PadelHub, and ChessAITutor. I enjoy football, outdoor activities, and taking on new challenges.",
+    "bio": "At NOVA I work on customer-facing telecom products, including mobile eSIM signup and travel connectivity. Before that I was at Swisscom in Switzerland, building self-service data platforms and acting as my team’s Security Champion. DeckMate, PadelHub, and ChessAITutor are projects I started myself.",
     "email": "ingthorb@gmail.com",
     "address": {
       "city": "Reykjavík",
@@ -59,19 +59,19 @@
         "company": "NOVA Iceland",
         "title": "Senior Software Engineer",
         "years": "October 2024 – Present",
-        "description": "Developed a mobile eSIM self-service signup flow and contributed to the Travel eSIM solution, helping customers get connected in just four clicks. Improve backend reliability and scalability across customer-facing telecom platforms."
+        "description": "Built the mobile eSIM self-service signup flow and worked on the Travel eSIM solution, which gets customers connected in four clicks. I also work on backend reliability and scalability for the customer-facing platforms."
       },
       {
         "company": "Swisscom",
         "title": "Senior Software Engineer for Data, Analytics & AI",
         "years": "April 2024 – September 2024",
-        "description": "Continued work on internal self-service data platforms, data management, and secure software delivery, helping teams discover and use data across Swisscom."
+        "description": "Kept working on internal self-service data platforms, data management, and secure delivery, so teams at Swisscom could find and use their data."
       },
       {
         "company": "Swisscom",
         "title": "Software Engineer for Data, Analytics & AI",
         "years": "August 2021 – March 2024",
-        "description": "Built and maintained full-stack self-service data applications and CI/CD pipelines. Helped introduce metadata and data-lineage tooling so teams could understand downstream dependencies. As Security Champion, maintained security documentation and automated code and dependency checks. Supported the team’s AWS cloud journey."
+        "description": "Built and maintained full-stack self-service data applications and CI/CD pipelines. Helped introduce metadata and data-lineage tooling so teams could see what depended on their data. As Security Champion, kept the security docs up to date and automated code and dependency checks. Supported the team’s move to AWS."
       },
       {
         "company": "AVINTIS SA",

@@ -11,17 +11,15 @@ export default function Resume({ data }) {
             <div className="container">
                 <div className="section-heading">
                     <div>
-                        <p className="eyebrow">03 / THE JOURNEY SO FAR</p>
+                        <p className="eyebrow">03 / EXPERIENCE</p>
                         <h2 id="experience-heading">
-                            Built on <span className="serif">experience.</span>
+                            Jobs I’ve <span className="serif">had.</span>
                         </h2>
                     </div>
                     <p>
-                        Teams in Iceland and Switzerland.
+                        Iceland and Switzerland.
                         <br />
-                        Products used by real people.
-                        <br />
-                        Something learned at every step.
+                        From a student job to telecom.
                     </p>
                 </div>
                 <div className="experience-grid">
@@ -71,8 +69,8 @@ export default function Resume({ data }) {
                 <div className="skills">
                     <div>
                         <Icon name="code" />
-                        <h3>My toolkit</h3>
-                        <p>The right tools for the problem.</p>
+                        <h3>Skills</h3>
+                        <p>What I use most.</p>
                     </div>
                     <ul aria-label="Technical skills">
                         {data.skills.map((skill) => (

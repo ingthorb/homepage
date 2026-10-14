@@ -7,20 +7,20 @@ export default function Footer({ data }) {
             <div className="container">
                 <div className="contact-main">
                     <div>
-                        <p className="eyebrow">04 / SAY HELLO</p>
+                        <p className="eyebrow">04 / CONTACT</p>
                         <h2>
-                            Have something
+                            Send me
                             <br />
-                            <span className="serif">in mind?</span>
+                            <span className="serif">an email.</span>
                         </h2>
                         <p>
-                            A project, a question, or just a good conversation.
+                            For work, a project,
                             <br />
-                            I’d love to hear from you.
+                            or just to say hello.
                         </p>
                     </div>
                     <a className="contact-email" href={`mailto:${data.email}`}>
-                        <span>LET’S START A CONVERSATION</span>
+                        <span>EMAIL</span>
                         {data.email}
                         <Icon name="external" />
                     </a>

@@ -56,7 +56,7 @@ export default function Header({ data }) {
                             href="#contact"
                             onClick={close}
                         >
-                            Let’s talk <Icon name="external" />
+                            Contact <Icon name="external" />
                         </a>
                     </nav>
                 </div>
@@ -68,14 +68,13 @@ export default function Header({ data }) {
                         Senior Software Engineer at NOVA Iceland
                     </p>
                     <h1>
-                        Thoughtful code.
+                        Ingþór Birkir
                         <br />
-                        <span className="serif">Useful things.</span>
+                        <span className="serif">Árnason.</span>
                     </h1>
                     <p className="hero-intro">
-                        I’m Ingþór Birkir Árnason. I build software that
-                        connects people, solves everyday problems, and turns a
-                        good idea into something real.
+                        I work on telecom products at NOVA, like eSIM signup
+                        and travel connectivity. I also build my own apps.
                     </p>
                     <div className="hero-actions">
                         <a className="button button-primary" href="#portfolio">
@@ -111,12 +110,12 @@ export default function Header({ data }) {
                         <span>
                             <Icon name="pin" /> Reykjavík, Iceland
                         </span>
-                        <span>Always curious.</span>
+                        <span>Back in Iceland.</span>
                     </figcaption>
                 </figure>
             </div>
             <div className="container hero-bottom">
-                <p>From telecom platforms to weekend ideas.</p>
+                <p>Telecom at NOVA. My own projects after that.</p>
                 <a href="#portfolio">
                     A few things I’ve built <Icon name="down" />
                 </a>
