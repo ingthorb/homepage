@@ -17,6 +17,6 @@ The skill's `personal portfolio` design-system search recommended an individual,
 
 Use semantic links, buttons, navigation and details/summary elements. Preserve visible focus, 44px control targets, a skip link, a mobile menu with expanded state and Escape handling, and a polite filter result count. Decorative SVGs are hidden from assistive technology. Anchor navigation works without custom scrolling scripts, and smooth scrolling respects reduced motion.
 
-Check widths of 375, 768, 1024 and 1440 CSS pixels. Content and technology labels must reflow; avoid fixed heights for text. Keep project descriptions, source links, groups and illustration keys in `public/resumeData.json`.
+Check widths of 375, 768, 1024 and 1440 CSS pixels. Content and technology labels must reflow; avoid fixed heights for text. Keep project descriptions, source links, groups and illustration keys in `src/resumeData.json`.
 
 The optional weather effects and old jQuery page scripts are no longer part of the page. The existing GA4 tag remains in `public/index.html`; the duplicate Universal Analytics initialization is removed. Unused legacy component/assets remain available in the repository but are not loaded by the redesigned page.

@@ -26,7 +26,7 @@ The production build is written to `build/`. Netlify uses Node.js 22 and the bui
 
 ## Content
 
-Edit `public/resumeData.json` for the biography, experience, skills, and project cards. Page metadata is in `public/index.html`.
+Edit `src/resumeData.json` for the biography, experience, skills, and project cards. Page metadata, structured data, and the no-JavaScript fallback are in `public/index.html`. Update that fallback when the biography, projects, or jobs change.
 
 Career details were checked against [LinkedIn](https://www.linkedin.com/in/ingthorb/) on 12 October 2026, including NOVA Iceland from October 2024, Swisscom through September 2024, and earlier employment dates. The existing education and AWS certification entries are retained. The former Swiss street address, phone number, and old downloadable CV link were replaced with the current city, email, and LinkedIn profile.
 

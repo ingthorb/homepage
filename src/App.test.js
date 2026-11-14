@@ -3,20 +3,10 @@ import {
     fireEvent,
     render,
     screen,
-    waitFor,
     within,
 } from "@testing-library/react";
 import App from "./App";
-import resumeData from "../public/resumeData.json";
-
-beforeEach(() => {
-    global.fetch = jest
-        .fn()
-        .mockResolvedValue({ ok: true, json: async () => resumeData });
-});
-afterEach(() => {
-    delete global.fetch;
-});
+import resumeData from "./resumeData.json";
 
 it("loads the profile and exposes all project destinations", async () => {
     render(<App />);
@@ -81,17 +71,4 @@ it("closes mobile navigation with Escape and restores toggle focus", async () =>
         }),
     );
     expect(toggle).toHaveAttribute("aria-expanded", "false");
-});
-
-it("offers a working retry after a failed content request", async () => {
-    global.fetch.mockRejectedValueOnce(new Error("Offline"));
-    render(<App />);
-    expect(await screen.findByRole("alert")).toHaveTextContent("couldn’t load");
-    fireEvent.click(screen.getByRole("button", { name: "Retry" }));
-    await waitFor(() =>
-        expect(
-            screen.getByRole("heading", { name: "DeckMate" }),
-        ).toBeInTheDocument(),
-    );
-    expect(global.fetch).toHaveBeenCalledTimes(2);
 });
