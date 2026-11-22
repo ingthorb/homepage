@@ -30,23 +30,23 @@ export default function About({ data }) {
                 <div className="about-copy">
                     <p className="lead">
                         I’m a software engineer in Reykjavík. I got into this
-                        because I like making things, and I still do that when
-                        I’m not at work.
+                        because I like building things — and I still do that
+                        nights and weekends.
                     </p>
                     <p>{data.bio}</p>
                     <div className="about-notes">
                         <div>
                             <span className="mini-label">HOW I WORK</span>
                             <p>
-                                I stay with a feature from the UI to the backend
-                                and the deploy pipeline.
+                                I like owning a feature end to end — UI,
+                                backend, and getting it out the door.
                             </p>
                         </div>
                         <div>
                             <span className="mini-label">
                                 AWAY FROM THE SCREEN
                             </span>
-                            <p>Football, time outside, and padel.</p>
+                            <p>Football, padel, and getting outside.</p>
                         </div>
                     </div>
                 </div>
