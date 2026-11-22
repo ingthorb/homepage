@@ -31,9 +31,21 @@ export default function Resume({ data }) {
                                 open={index === 0 ? true : undefined}
                             >
                                 <summary>
-                                    <span className="work-number">
-                                        {String(index + 1).padStart(2, "0")}
-                                    </span>
+                                    {work.logo ? (
+                                        <img
+                                            className="work-logo"
+                                            src={`images/${work.logo}`}
+                                            alt=""
+                                            width="44"
+                                            height="44"
+                                            loading="lazy"
+                                            decoding="async"
+                                        />
+                                    ) : (
+                                        <span className="work-number">
+                                            {String(index + 1).padStart(2, "0")}
+                                        </span>
+                                    )}
                                     <span className="work-title">
                                         <h3>{work.company}</h3>
                                         <span>{work.title}</span>
@@ -43,7 +55,15 @@ export default function Resume({ data }) {
                                     </span>
                                     <Icon name="plus" />
                                 </summary>
-                                <p>{work.description}</p>
+                                {work.highlights ? (
+                                    <ul className="work-highlights">
+                                        {work.highlights.map((item) => (
+                                            <li key={item}>{item}</li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    <p>{work.description}</p>
+                                )}
                             </details>
                         ))}
                     </div>

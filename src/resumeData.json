@@ -57,42 +57,56 @@
     "work": [
       {
         "company": "NOVA Iceland",
+        "logo": "companies/nova.png",
         "title": "Senior Software Engineer",
         "years": "October 2024 – Present",
-        "description": "Built the mobile eSIM self-service signup flow and worked on the Travel eSIM solution, which gets customers connected in four clicks. I also work on backend reliability and scalability for the customer-facing platforms."
+        "description": "Telecom products for Nova and wholesale partners — eSIM, provisioning, and platform reliability.",
+        "highlights": [
+          "Contributed to the mobile eSIM self-service signup flow, helping NOVA Iceland become one of the first in the country to offer this feature.",
+          "Contributed to the Travel eSIM solution, helping simplify connectivity for international travelers to four clicks.",
+          "Enhanced backend systems for improved reliability and scalability, elevating the overall customer experience across telecom platforms.",
+          "Contributed to Nova’s wholesale platform, which retail partners including Kosmos use to sell mobile subscriptions, SIMs, and eSIMs.",
+          "Actively working on mobile provisioning, number porting and Mobile Service Watch eSIM pairing for Nova and wholesale partners, as well as improving monitoring and security practices on our platforms."
+        ]
       },
       {
         "company": "Swisscom",
+        "logo": "companies/swisscom.png",
         "title": "Senior Software Engineer for Data, Analytics & AI",
         "years": "April 2024 – September 2024",
         "description": "Kept working on internal self-service data platforms, data management, and secure delivery, so teams at Swisscom could find and use their data."
       },
       {
         "company": "Swisscom",
+        "logo": "companies/swisscom.png",
         "title": "Software Engineer for Data, Analytics & AI",
         "years": "August 2021 – March 2024",
         "description": "Built and maintained full-stack self-service data applications and CI/CD pipelines. Helped introduce metadata and data-lineage tooling so teams could see what depended on their data. As Security Champion, kept the security docs up to date and automated code and dependency checks. Supported the team’s move to AWS."
       },
       {
         "company": "AVINTIS SA",
+        "logo": "companies/avintis.png",
         "title": "Software Engineer",
         "years": "December 2019 – August 2021",
         "description": "Worked as a consultant for the Swiss government’s Federal Office of Information Technology, Systems and Telecommunication. Built tax-authority web applications with Java, Spring Boot, Angular, and Kafka, with unit, integration, and Selenium regression tests. Maintained Jenkins pipelines and Cloud Foundry deployments."
       },
       {
         "company": "Advania Ísland",
+        "logo": "companies/advania.png",
         "title": "Software Developer / Software Engineer",
         "years": "November 2017 – December 2019",
         "description": "Worked with Risk Management Solutions and teams in London and New York. Built C# and .NET integrations, SQL-backed APIs, and Azure delivery pipelines. Developed Django applications and Python data pipelines using AWS Lambda, S3, and API Gateway, alongside React frontend features."
       },
       {
         "company": "Travelade",
+        "logo": "companies/travelade.svg",
         "title": "Software Developer",
         "years": "June 2017 – October 2017",
         "description": "Built frontend features with React and Redux at an early-stage travel startup. Contributed product ideas, worked with AWS and Git, and improved search-engine visibility."
       },
       {
         "company": "Rauðás Hugbúnaður ehf.",
+        "logo": "companies/raudas.svg",
         "title": "Web Developer · Part-time",
         "years": "October 2016 – June 2017",
         "description": "Worked as a full-stack developer while studying, using Java, JavaScript, and MySQL. Created website themes and games, and set up TeamCity continuous integration and deployment for the company’s Git branches."
@@ -108,9 +122,11 @@
       "Python / Django",
       "SQL / PostgreSQL",
       "Node.js / Express",
+      "Supabase",
       "AWS",
       "Microsoft Azure",
       "CI/CD / DevOps",
+      "Selenium",
       "Jenkins / TeamCity",
       "Git",
       "Docker / Kubernetes",
