@@ -41,6 +41,7 @@ export default function Portfolio({ data }) {
                     >
                         {filters.map((label) => (
                             <button
+                                type="button"
                                 key={label}
                                 aria-pressed={filter === label}
                                 onClick={() => setFilter(label)}
@@ -50,10 +51,17 @@ export default function Portfolio({ data }) {
                         ))}
                     </div>
                     <p className="project-count" role="status">
-                        {projects.length} projects
+                        {projects.length}{" "}
+                        {projects.length === 1 ? "project" : "projects"}
                     </p>
                 </div>
-                <SimpleCard projects={projects} />
+                {projects.length > 0 ? (
+                    <SimpleCard projects={projects} />
+                ) : (
+                    <p className="project-empty">
+                        No projects in this group yet. Try another filter.
+                    </p>
+                )}
             </div>
         </section>
     );

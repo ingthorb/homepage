@@ -63,7 +63,7 @@ export default function Header({ data }) {
             </div>
             <div className="container hero">
                 <div className="hero-copy">
-                    <p className="eyebrow hero-role">
+                    <p className="hero-role">
                         <span className="status-dot" aria-hidden="true" />
                         Senior Software Engineer at NOVA Iceland
                     </p>
@@ -89,13 +89,6 @@ export default function Header({ data }) {
                             GitHub <Icon name="external" />
                         </a>
                     </div>
-                    <div className="hero-current">
-                        <span className="mini-label">CURRENTLY</span>
-                        <span>
-                            Senior Software Engineer at{" "}
-                            <strong>NOVA Iceland</strong>
-                        </span>
-                    </div>
                 </div>
                 <figure className="hero-portrait">
                     <div className="portrait-frame">
@@ -104,6 +97,8 @@ export default function Header({ data }) {
                             alt={data.name}
                             width="1000"
                             height="1000"
+                            decoding="async"
+                            {...{ fetchpriority: "high" }}
                         />
                     </div>
                     <figcaption>
@@ -113,12 +108,6 @@ export default function Header({ data }) {
                         <span>Back in Iceland.</span>
                     </figcaption>
                 </figure>
-            </div>
-            <div className="container hero-bottom">
-                <p>Telecom at NOVA. My own projects after that.</p>
-                <a href="#portfolio">
-                    A few things I’ve built <Icon name="down" />
-                </a>
             </div>
         </header>
     );

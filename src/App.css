@@ -2,17 +2,21 @@
     --paper: #f5f3ec;
     --white: #fffefb;
     --ink: #19372d;
-    --muted: #5a665e;
+    --muted: #4d5a52;
     --line: #d6dad0;
     --forest: #193e30;
     --forest-deep: #122f25;
     --lime: #d8f080;
+    --lime-ink: #4f6a1f;
+    --accent-soft: #edf0e5;
     --on-dark: #f3f4e9;
     --muted-dark: #c3cfc3;
+    --focus: #85600b;
     --radius: 12px;
     --space-section: 100px;
     --font-body: "Open Sans", Arial, sans-serif;
     --font-serif: "Libre Baskerville", Georgia, serif;
+    --motion-fast: 160ms;
 }
 * {
     box-sizing: border-box;
@@ -23,7 +27,18 @@ html {
 }
 body {
     margin: 0;
-    background: var(--paper);
+    background:
+        radial-gradient(
+            1200px 640px at 12% -8%,
+            #e8ecd9 0%,
+            transparent 58%
+        ),
+        radial-gradient(
+            900px 520px at 100% 8%,
+            #e4ebe0 0%,
+            transparent 52%
+        ),
+        var(--paper);
     color: var(--ink);
     font-family: var(--font-body);
     font-size: 16px;
@@ -69,10 +84,11 @@ button,
 a,
 summary {
     transition:
-        background-color 160ms,
-        color 160ms,
-        border-color 160ms,
-        box-shadow 160ms;
+        background-color var(--motion-fast),
+        color var(--motion-fast),
+        border-color var(--motion-fast),
+        box-shadow var(--motion-fast),
+        transform var(--motion-fast);
 }
 button:active,
 .button:active {
@@ -81,8 +97,15 @@ button:active,
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
-    outline: 3px solid #85600b;
+    outline: 3px solid var(--focus);
     outline-offset: 5px;
+}
+#main,
+#portfolio,
+#about,
+#resume,
+#contact {
+    scroll-margin-top: 100px;
 }
 img {
     display: block;
@@ -111,9 +134,9 @@ ul {
 }
 .eyebrow,
 .mini-label {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.14em;
     line-height: 1.6;
 }
 .eyebrow {
@@ -171,7 +194,7 @@ ul {
     line-height: 1;
 }
 .wordmark span {
-    color: #698026;
+    color: var(--lime-ink);
 }
 .skip-link {
     position: fixed;
@@ -225,7 +248,7 @@ ul {
     font-weight: 600;
 }
 .navigation > a:hover {
-    color: #587323;
+    color: var(--lime-ink);
 }
 .navigation .nav-contact {
     border: 1px solid #aeb9a6;
@@ -247,15 +270,24 @@ ul {
     grid-template-columns: 1.4fr 0.85fr;
     gap: 80px;
     align-items: center;
-    padding-block: 83px 66px;
+    padding-block: 88px 72px;
 }
-.hero .eyebrow.hero-role { width: fit-content; padding: 9px 14px; border: 1px solid #d9dfcd; border-radius: 999px; background: #edf0e5; color: var(--ink); font-size: 13px; font-weight: 600; letter-spacing: .01em; text-transform: none; }
-.hero .eyebrow {
-    font-size: 10px;
-    display: flex;
+.hero-role {
+    width: fit-content;
+    display: inline-flex;
     gap: 10px;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 28px;
+    padding: 9px 14px;
+    border: 1px solid #d9dfcd;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
 }
 .status-dot {
     width: 7px;
@@ -264,6 +296,18 @@ ul {
     border-radius: 50%;
     box-shadow: 0 0 0 4px #e4e9d9;
     flex-shrink: 0;
+    animation: status-pulse 2.4s ease-in-out infinite;
+}
+@keyframes status-pulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0 4px #e4e9d9;
+        opacity: 1;
+    }
+    50% {
+        box-shadow: 0 0 0 7px #e4e9d966;
+        opacity: 0.85;
+    }
 }
 .hero h1 {
     font-size: clamp(48px, 5.2vw, 74px);
@@ -275,34 +319,17 @@ ul {
     color: #43614d;
 }
 .hero-intro {
-    font-size: 16px;
-    line-height: 1.9;
-    max-width: 520px;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 34em;
+    text-wrap: pretty;
 }
 .hero-actions {
     display: flex;
     gap: 28px;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 30px;
-}
-.hero-current {
-    margin-top: 46px;
-    padding-top: 20px;
-    border-top: 1px solid var(--line);
-    font-size: 11px;
-    color: var(--muted);
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-.hero-current .mini-label {
-    margin: 0;
-    font-size: 9px;
-}
-.hero-current strong {
-    color: var(--ink);
-    font-weight: 600;
+    margin-top: 34px;
 }
 .hero-portrait {
     position: relative;
@@ -339,24 +366,6 @@ ul {
     width: 13px;
     height: 13px;
 }
-.hero-bottom {
-    border-top: 1px solid var(--line);
-    padding-block: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 11px;
-}
-.hero-bottom a {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    min-height: 44px;
-}
-.hero-bottom .icon {
-    height: 15px;
-    width: 15px;
-}
 .projects-section {
     background: var(--white);
     border-block: 1px solid var(--line);
@@ -376,9 +385,11 @@ ul {
     max-width: 650px;
 }
 .section-heading > p {
-    font-size: 12px;
-    line-height: 1.9;
+    font-size: 14px;
+    line-height: 1.8;
     min-width: 210px;
+    max-width: 28em;
+    text-wrap: pretty;
 }
 .project-toolbar {
     display: flex;
@@ -399,7 +410,7 @@ ul {
     padding: 9px 16px;
     color: var(--muted);
     background: transparent;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
 }
 .project-filters button:hover {
@@ -412,8 +423,16 @@ ul {
     color: var(--white);
 }
 .project-count {
-    font-size: 11px;
+    font-size: 13px;
     white-space: nowrap;
+}
+.project-empty {
+    margin: 8px 0 0;
+    padding: 28px 24px;
+    border: 1px dashed var(--line);
+    border-radius: var(--radius);
+    font-size: 14px;
+    color: var(--muted);
 }
 .project-grid {
     display: grid;
@@ -518,7 +537,7 @@ ul {
     font-weight: 600;
 }
 .project-link:hover {
-    color: #566d20;
+    color: var(--lime-ink);
 }
 .project-link .icon {
     width: 17px;
@@ -772,11 +791,11 @@ ul {
     padding-top: 25px;
 }
 .about-notes p {
-    font-size: 11px;
-    line-height: 1.9;
+    font-size: 13px;
+    line-height: 1.8;
 }
 .about-notes .mini-label {
-    font-size: 9px;
+    font-size: 11px;
 }
 .about-section a:focus-visible,
 footer a:focus-visible {
@@ -948,7 +967,7 @@ footer {
 }
 .contact-email > span {
     display: block;
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 0.15em;
     color: var(--muted-dark);
     margin-bottom: 18px;
@@ -981,7 +1000,7 @@ footer {
 }
 .footer-bottom p {
     color: var(--muted-dark);
-    font-size: 9px;
+    font-size: 12px;
 }
 .footer-bottom > div {
     display: flex;
@@ -991,7 +1010,7 @@ footer {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 10px;
+    font-size: 13px;
     min-height: 44px;
 }
 .footer-bottom > div > a:hover {
@@ -1038,10 +1057,6 @@ footer {
     }
     .hero-portrait figcaption {
         flex-wrap: wrap;
-    }
-    .hero-current {
-        flex-wrap: wrap;
-        gap: 8px;
     }
     .project-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1119,29 +1134,26 @@ footer {
         gap: 45px;
         padding-block: 48px 36px;
     }
-    .hero .eyebrow {
+    .hero-role {
+        max-width: 100%;
+        padding: 8px 12px;
         font-size: 12px;
-        letter-spacing: 0.03em;
         margin-bottom: 22px;
     }
-    .hero-role { max-width: 100%; padding: 8px 11px; }
     .hero h1 {
         font-size: clamp(42px, 9.5vw, 64px);
     }
     .hero-intro {
-        font-size: 14px;
-        max-width: 520px;
+        font-size: 16px;
+        max-width: 34em;
     }
     .hero-actions {
         gap: 24px;
     }
     .hero-actions .button {
-        font-size: 12px;
+        font-size: 13px;
         padding-inline: 18px;
         gap: 18px;
-    }
-    .hero-current {
-        margin-top: 30px;
     }
     .hero-portrait {
         max-width: 360px;
@@ -1156,19 +1168,7 @@ footer {
         padding: 12px;
     }
     .hero-portrait figcaption {
-        font-size: 10px;
-    }
-    .hero-bottom {
-        font-size: 10px;
-        align-items: flex-start;
-        gap: 15px;
-    }
-    .hero-bottom p {
-        max-width: 150px;
-        padding-top: 10px;
-    }
-    .hero-bottom a {
-        gap: 9px;
+        font-size: 12px;
     }
     .section-heading {
         flex-direction: column;
@@ -1180,9 +1180,7 @@ footer {
         font-size: 36px;
     }
     .section-heading > p {
-        font-size: 12px;
-    }
-    .section-heading > p {
+        font-size: 14px;
         max-width: 400px;
     }
     .project-toolbar {
@@ -1194,11 +1192,11 @@ footer {
         gap: 7px;
     }
     .project-filters button {
-        font-size: 10px;
+        font-size: 12px;
         padding: 8px 12px;
     }
     .project-count {
-        font-size: 10px;
+        font-size: 12px;
     }
     .project-grid {
         grid-template-columns: 1fr;
@@ -1252,9 +1250,10 @@ footer {
         font-size: 13px;
     }
     .about-notes p {
-        font-size: 12px;
+        font-size: 13px;
     }
     .about-notes {
+        grid-template-columns: 1fr;
         gap: 20px;
     }
     .experience-grid {
@@ -1310,7 +1309,7 @@ footer {
         font-size: 24px;
     }
     .contact-email > span {
-        font-size: 9px;
+        font-size: 11px;
     }
     footer {
         padding-top: 60px;
@@ -1319,14 +1318,14 @@ footer {
         gap: 15px;
     }
     .footer-bottom p {
-        font-size: 9px;
+        font-size: 12px;
     }
     .footer-bottom > div {
         width: 100%;
         gap: 26px;
     }
     .footer-bottom > div > a {
-        font-size: 11px;
+        font-size: 13px;
     }
     .footer-bottom > div > a:last-child {
         margin-left: auto;
@@ -1350,17 +1349,17 @@ footer {
     line-height: 1.8;
 }
 .project-kind {
-    font-size: 10px;
+    font-size: 11px;
 }
 .project-technologies li {
-    font-size: 10px;
+    font-size: 11px;
 }
 .project-link,
 .project-details {
     font-size: 13px;
 }
 .about-copy > p:not(.lead) {
-    font-size: 14px;
+    font-size: 15px;
 }
 .experience-item > p {
     font-size: 14px;
@@ -1369,15 +1368,18 @@ footer {
     font-size: 13px;
 }
 .work-title .work-date {
-    font-size: 11px;
+    font-size: 12px;
 }
 .education-item p,
 .education-item > span {
-    font-size: 12px;
+    font-size: 13px;
 }
 .skills li {
-    font-size: 12px;
+    font-size: 13px;
 }
 .about-notes p {
+    font-size: 13px;
+}
+.hero-portrait figcaption {
     font-size: 12px;
 }
