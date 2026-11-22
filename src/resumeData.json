@@ -123,6 +123,7 @@
       "SQL / PostgreSQL",
       "Node.js / Express",
       "Supabase",
+      "Redis",
       "AWS",
       "Microsoft Azure",
       "CI/CD / DevOps",
@@ -130,6 +131,7 @@
       "Jenkins / TeamCity",
       "Git",
       "Docker / Kubernetes",
+      "Argo",
       "Kafka"
     ]
   },
