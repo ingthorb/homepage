@@ -16,8 +16,8 @@ export default function App() {
             <Header data={resumeData.main} />
             <main id="main" tabIndex="-1">
                 <Portfolio data={resumeData.portfolio} />
-                <About data={resumeData.main} />
                 <Resume data={resumeData.resume} />
+                <About data={resumeData.main} />
             </main>
             <Footer data={resumeData.main} />
         </>

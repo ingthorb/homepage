@@ -10,7 +10,7 @@ export default function About({ data }) {
         >
             <div className="container about-grid">
                 <div>
-                    <p className="eyebrow">02 / A LITTLE ABOUT ME</p>
+                    <p className="eyebrow">03 / A LITTLE ABOUT ME</p>
                     <h2 id="about-heading">
                         Reykjavík,
                         <br />

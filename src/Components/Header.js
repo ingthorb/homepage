@@ -45,11 +45,11 @@ export default function Header({ data }) {
                         <a href="#portfolio" onClick={close}>
                             Projects
                         </a>
-                        <a href="#about" onClick={close}>
-                            About
-                        </a>
                         <a href="#resume" onClick={close}>
                             Experience
+                        </a>
+                        <a href="#about" onClick={close}>
+                            About
                         </a>
                         <a
                             className="nav-contact"

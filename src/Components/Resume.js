@@ -11,7 +11,7 @@ export default function Resume({ data }) {
             <div className="container">
                 <div className="section-heading">
                     <div>
-                        <p className="eyebrow">03 / EXPERIENCE</p>
+                        <p className="eyebrow">02 / EXPERIENCE</p>
                         <h2 id="experience-heading">
                             Jobs I’ve <span className="serif">had.</span>
                         </h2>

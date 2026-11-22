@@ -8,7 +8,7 @@ The skill's `personal portfolio` design-system search recommended an individual,
 
 - Warm ivory background, forest text and sections, lime accents. Semantic color tokens live in `src/App.css`.
 - Locally hosted Open Sans for readable body copy and navigation; Libre Baskerville italic for expressive headings. No font-service request is required.
-- One primary heading, meaningful section headings, and a logical reading order: introduction → projects → about → experience → contact.
+- One primary heading, meaningful section headings, and a logical reading order: introduction → projects → experience → about → contact.
 - Six projects, with category filters and expandable feature lists. The covers are decorative illustrations, not screenshots or product logos.
 - Native expandable career entries keep the timeline easy to scan without losing descriptions.
 - A visible email link and direct GitHub/LinkedIn links provide useful actions without a contact form backend.
